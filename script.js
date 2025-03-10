@@ -14,6 +14,7 @@ document.getElementById("submitBtn").addEventListener("click", function() {
         return;
     }
 	alert(`First Name:${firstname} Last Name:${lastname} Phone Number:${phonenumber} Email ID:${email}`);
+	
 
     // Get tbody
     const tablebody = document.querySelector("tbody");
@@ -28,8 +29,9 @@ document.getElementById("submitBtn").addEventListener("click", function() {
         <td>${firstname}</td>
         <td>${lastname}</td>
         <td>${phonenumber}</td>
-        <td>${email}</td>
+          <td style="border-right: none;"><a href="mailto:${email}">${email}</a></td>
     `;
+ 
     tablebody.appendChild(newrow);
 	document.querySelector(".firstname").value="";
 		document.querySelector(".lastname").value="";
